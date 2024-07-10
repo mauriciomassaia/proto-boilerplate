@@ -1,23 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title><%= htmlWebpackPlugin.options.title %></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
     <style>
-      html, body, ul, li, div, h2, a, p { margin: 0; padding: 0; }
-      html, body { font: 16px/1.5em "SF Mono", Consolas, monospace; }
+      html,
+      body,
+      ul,
+      li,
+      div,
+      h2,
+      a,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        font:
+          16px/1.5em 'Roboto Mono',
+          Consolas,
+          monospace;
+      }
     </style>
   </head>
+
   <body>
     <script>
       window.addEventListener('keyup', function (e) {
         if (e.key === 'Backspace') {
-          var u = window.location.href
-          var i = u.indexOf('/proto-')
-          if (i > -1) window.location.href = u.substring(0, i)
+          var u = window.location.href;
+          var i = u.indexOf('/proto-');
+          if (i > -1) window.location.href = u.substring(0, i);
         }
-      })
+      });
     </script>
   </body>
 </html>
