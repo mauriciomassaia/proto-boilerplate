@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = (env) => {
   const { ID, mode = 'development' } = env;
   console.log(`Building -> ${ID} ...`);
+
   return {
     target: 'web',
     mode,
@@ -53,7 +54,5 @@ module.exports = (env) => {
     ],
 
     externals: ['canvas'],
-
-    devtool: 'cheap-module-source-map',
   };
 };
